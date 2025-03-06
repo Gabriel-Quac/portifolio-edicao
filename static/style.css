@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ff7e7e;
+}
+
+body {
+    background-color: #000000 !important;
+}
+
+h1, h2 {
+    font-weight: bold;
+}
+
+.text-primary {
+    color: #ffffff !important;
+}
+
+.text-muted {
+    color: #ffffff !important;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #c24040;
+}
+
+.card-body {
+    background-color: #363636;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+video {
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+
+/* Seção de Habilidades */
+#skills .card {
+    border: 1px solid #313030;
+    border-radius: 8px;
+}
+
+#skills .card-body {
+    padding: 20px;
+}
+
+/* Seção de Contato */
+#contact {
+    background-color: #313030;
+}
+
+/* Seção de vídeos */
+#videos {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Estilo dos vídeos no carrossel */
+.card-img-top {
+    width: 100%; /* Garante que os vídeos ocupem toda a largura do card */
+    height: auto; /* Mantém a proporção do vídeo */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+/* Títulos do vídeo */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #c24040;
+    text-align: center;
+    margin-bottom: 15px; /* Espaço entre o título e o vídeo */
+}
+
+/* Descrição do vídeo */
+.card-text {
+    font-size: 1rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 767px) {
+    .btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Estiliza as seções específicas */
+#skills, #canais, #programas {
+    background: linear-gradient(to bottom, #222, #111); /* Gradiente preto acinzentado */
+    color: #fff; /* Texto branco */
+    padding: 50px 0;
+}
+
+/* Estiliza os cards */
+#skills .card, #canais .card, #programas .card {
+    background-color: #1a1a1a; /* Cinza escuro */
+    color: #ddd; /* Texto acinzentado */
+    border: 1px solid #333; /* Borda sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito de hover nos cards */
+#skills .card:hover, #canais .card:hover, #programas .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Ajusta os títulos */
+#skills h2, #canais h2, #programas h2 {
+    color: #d88a8a; /* Mantém a cor do texto */
+}
+
+/* Botões no estilo escuro */
+#canais .btn-danger {
+    background-color: #d9534f;
+    border: none;
+}
+
+#canais .btn-danger:hover {
+    background-color: #c9302c;
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    #skills, #canais, #programas {
+        padding: 30px 0;
+    }
+} 
+
+/* Estiliza a seção de contato */
+#contact {
+    background: linear-gradient(to bottom, #222, #111); /* Gradiente preto acinzentado */
+    color: #fff; /* Texto branco */
+    padding: 50px 0;
+}
+
+/* Ajusta o título */
+#contact h2 {
+    color: #d88a8a; /* Mantém a cor do texto */
+}
+
+/* Ajusta o parágrafo */
+#contact p {
+    color: #ddd; /* Texto acinzentado */
+}
+
+/* Botão no estilo escuro */
+#contact .btn-primary {
+    background-color: #d9534f; /* Vermelho escuro */
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efeito de hover no botão */
+#contact .btn-primary:hover {
+    background-color: #c9302c;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 576px) {
+    #contact {
+        padding: 30px 0;
+    }
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+    font-weight: bold;
+}
