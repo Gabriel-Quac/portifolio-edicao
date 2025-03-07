@@ -3,9 +3,20 @@ from config import Config
 from models import db, Video
 from flask_migrate import Migrate
 import os
+from dotenv import load_dotenv  # Importando o dotenv
+
+# Carregar as variáveis do arquivo .env
+load_dotenv()
 
 app = Flask(__name__)
+
+# Carregar configurações
 app.config.from_object(Config)
+
+# Usando as variáveis de ambiente no seu código
+app.config['UPLOAD_FOLDER'] = os.getenv('UPLOAD_FOLDER', 'default_upload_path')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'default_secret_key')
+
 db.init_app(app)
 
 # Configuração do Flask-Migrate
