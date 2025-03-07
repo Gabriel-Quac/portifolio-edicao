@@ -1,8 +1,6 @@
-Flask==2.3.0  # ou a versão mais recente compatível
+Flask==2.3.0
 Flask-SQLAlchemy==2.5.1
 Flask-Migrate==3.1.0
 python-dotenv==0.19.2
-gunicorn==20.1.0  # ou qualquer versão que você deseje
-Werkzeug==2.3.0  # ou a versão mais recente compatível
-Flask==1.1.2  # ou versão compatível com o seu projeto
-Werkzeug==1.0.1  # versão que não tem o erro mencionado
+gunicorn==20.1.0
+Werkzeug==2.3.0
