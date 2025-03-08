@@ -1,4 +1,9 @@
 import os
+from dotenv import load_dotenv
+
+# Carregar variáveis do .env
+load_dotenv()
+
 
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))
 
