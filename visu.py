@@ -1,10 +1,23 @@
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
+import os
+import json
+from google.oauth2 import service_account
 import requests
 
 # Defina o escopo de autenticação
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name('just-hook-386016-df63541c9511.json', scope)
+
+# Carregar as credenciais da variável de ambiente
+google_credentials_json = os.environ.get('GOOGLE_CLOUD_CREDENTIALS')
+
+if google_credentials_json:
+    # Converter o conteúdo da variável de ambiente para um dicionário
+    creds_dict = json.loads(google_credentials_json)
+    
+    # Usar as credenciais convertidas para criar o objeto de credenciais
+    creds = service_account.Credentials.from_service_account_info(creds_dict, scopes=scope)
+else:
+    raise ValueError("As credenciais do Google Cloud não foram encontradas nas variáveis de ambiente.")
 
 # Autentique e abra a planilha
 client = gspread.authorize(creds)
@@ -48,7 +61,7 @@ def get_youtube_views(video_url):
     return 0
 
 
-# Nova função para pegar o valor da célula B1
+# Nova função para pegar o valor da célula D2
 def get_b1_value():
-    """Obtém o valor da célula C1 da planilha"""
-    return sheet.acell('D2').value  
+    """Obtém o valor da célula D2 da planilha"""
+    return sheet.acell('D2').value
